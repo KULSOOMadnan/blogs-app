@@ -10,7 +10,7 @@ function navbar() {
     <>
       <div>
         <nav
-          className={`bg-blue-700 flex items-center p-2 justify-between md:p-4 sticky z-10  backdrop-blur-md   font-satisfy fixed`}
+          className={`bg-blue-700 flex items-center p-2 justify-between md:p-4 z-10  backdrop-blur-md   font-satisfy sticky`}
         >
           {/* Logo  */}
           <div className="flex text-white text-3xl ">
@@ -27,7 +27,7 @@ function navbar() {
 
           {/* Show/Hide menu based on isOpen state */}
           <ul
-            className={`text-white md:text-xl space-x-7 cursor-pointer text-xl hidden md:flex`}
+            className={`text-white md:text-xl space-x-7 cursor-pointer text-xl hidden  md:flex`}
           >
             <li className=" hover:text-gray-400">
               <Link href="/">Home</Link>
