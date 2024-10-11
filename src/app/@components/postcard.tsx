@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { slugify } from "@/utils/slufy";
 interface Post {
-  id: number;
+ 
   title: string;
   description: string;
   author: string;
@@ -9,7 +9,7 @@ interface Post {
   imgUrl: string;
 }
 
-function BlogCard({ id, title, description, date, author, imgUrl }: Post) {
+function BlogCard({title, description, date, author, imgUrl }: Post) {
   return (
     <div>
       <Link href={`/blogs/${slugify(title)}`}>

@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import Navbar from '@/app/@components/Navbar'; // Assuming you have a Navbar component
-import Footer from '../@components/Footer';
+
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -25,17 +24,13 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Fixed Navbar at the top */}
-      <header className="w-full fixed top-0">
-        <Navbar />
-      </header>
-
+      
       {/* Form content centered on the page */}
       <main className="flex-grow flex items-center justify-center pt-16 pb-16 mt-11">
         <div className="max-w-2xl bg-white shadow-lg rounded-lg p-8">
           <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
           <p className="text-gray-600 mb-6 text-center">
-            Have any questions or feedback? We'd love to hear from you. Fill out the form below to get in touch!
+            Have any questions or feedback? We&apos;d love to hear from you. Fill out the form below to get in touch!
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -98,9 +93,7 @@ const ContactPage = () => {
       </main>
 
       {/* Fixed Footer at the bottom */}
-      <footer className="w-full mt-auto">
-        <Footer />
-      </footer>
+     
     </div>
   );
 };

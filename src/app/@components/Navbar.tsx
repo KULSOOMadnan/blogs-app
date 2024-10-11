@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-function navbar() {
+function Navbar() {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -78,4 +78,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;

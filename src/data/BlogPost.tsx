@@ -1,4 +1,4 @@
-interface BlogPost {
+ interface BlogPost {
   id: number;
   title: string;
   description: string;

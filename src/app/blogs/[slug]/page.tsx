@@ -2,36 +2,37 @@
 import { usePathname } from 'next/navigation';
 import { blogPosts ,blogContents } from '@/data/BlogPost';
 import { slugify } from '@/utils/slufy';    // Slugify utility function
-import Navbar from '@/app/@components/Navbar';
 import CommentSection from '@/app/@components/CommentSetion';
 import React from 'react'
-import Footer from '@/app/@components/Footer';
+
+
+
 
 const BlogPostPage = () => {
   const pathname = usePathname(); // Get the current path
   const slug = pathname.split("/").pop(); // Extract the slug from the URL
 
   // Find the post based on the slugified title
-  const post : any   = blogPosts.find((post) => slugify(post.title) === slug);
+  const post  = blogPosts.find((post) => slugify(post.title) === slug);
   
-  // Get the content for this blog post
-  const content = blogContents[post.id] || [];
 
-  if (!post) {
-    return <p>Blog post not found</p>;
+    if (!post) {
+      console.error("Post not found for slug:", slug);
+      return; // Handle the error accordingly
+    }
+  
+   const content = blogContents![post.id] || [];
 
-  }
 
     return (
       <div className=''>
-      <Navbar/>
-      <div className="px-0 py-6 md:px-52">
+        <div className="px-0 py-6 md:px-52">
         <h1 className="text-4xl  md:text-5xl font-bold mb-4 text-center">{post.title}</h1>
         <div className='flex justify-center flex-col px-10 md:20'>
         <p className="text-gray-600 mb-4 text-center">
               By <span className="font-semibold">{post.author}</span> on {post.date}
         </p>
-        <img src={post.imgUrl} alt={post.title} className="mb-6 md:h-[600px] w-full h-[400px]" />
+        <img src={post.imgUrl} alt={post.title} className="mb-6 md:h-[600px] w-full h-[400px]"  />
         <p className='text-2xl text-centerc'>{post.content}</p>
         {/* Render the blog content */}
         {content.map((item, index) => {
@@ -57,7 +58,7 @@ const BlogPostPage = () => {
         {/* comment section  */}
         <CommentSection/>
       </div>
-      <Footer/>
+      
       </div>
     //   <div >
     //   <Navbar />
