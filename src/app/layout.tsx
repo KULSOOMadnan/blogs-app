@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 
 interface LayoutProps {
   children: ReactNode;
+  components : JSX.Element
   
 }
 
