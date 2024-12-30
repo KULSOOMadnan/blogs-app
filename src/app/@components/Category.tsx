@@ -1,10 +1,9 @@
 import React from "react";
-import shuttle from "../../../public/shuttle.svg";
 import economy from "../../../public/economy (1).svg";
 import cyborg from "../../../public/cyborg.svg";
 import icon from "../../../public/Icon.svg";
 import Image, { StaticImageData } from "next/image";
-import { title } from "process";
+
 
 interface Card {
   id: number;

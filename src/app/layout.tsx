@@ -3,11 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script"; // Import Script
 import Navbar from "./@components/Navbar";
-
 import { ReactNode } from "react";
 import Footer1 from "./@components/Footer1";
-
-import OurStory from "./@components/OurStory";
 import Category from "./@components/Category";
 import Join from "./@components/Join";
 
