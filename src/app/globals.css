@@ -5,6 +5,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+   /*------Color variables------*/
+   --black: #232536;
+   --color_black_900_99: #00000099;
+   --blue_gray_900: #282938;
+   --dark_grey: #4c4c4c;
+   --gray_600_19: #6d6e7519;
+   --gray_600_4c: #6d6e754c;
+   --gray_600_66: #6d6e7566;
+   --lavender: #f4f0f8;
+   --light_0: #ffffff;
+   --light_1: #ffffff0c;
+   --light_2: #ffffffb2;
+   --light_grey: #f4f4f4;
+   --light_yellow: #faf6ea;
+   --medium_grey_0: #6d6e75;
+   --medium_grey_1: #6d6e7599;
+   --purple: #592ea9;
+   --yellow: #ffd050;
 }
 
 @media (prefers-color-scheme: dark) {

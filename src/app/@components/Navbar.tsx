@@ -10,36 +10,42 @@ function Navbar() {
     <>
       <div>
         <nav
-          className={`bg-blue-700 flex items-center p-2 justify-between md:p-4 z-10  backdrop-blur-md   font-satisfy sticky`}
+          className={`bg-blue flex items-center p-2 justify-between md:p-4 z-10  backdrop-blur-md   font-satisfy sticky`}
         >
           {/* Logo  */}
-          <div className="flex text-white text-3xl ">
-            <Image
-              src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png"
-              className="text-white md:text-3xl text-2xl cursor-pointer mx-2 md:mx-0 h-10 w-10 rounded-full"
-              width={32}
-              height={32}
-              alt="logo"
-            />
-            <Link href='/blogs'>Blog</Link>
-            
+          <div className="flex text-white text-3xl font-sen font-extrabold ">
+            <Link href="/">FinSweet</Link>
           </div>
 
           {/* Show/Hide menu based on isOpen state */}
           <ul
-            className={`text-white md:text-xl space-x-7 cursor-pointer text-xl hidden  md:flex`}
+            className={`text-white md:text-xl space-x-7 cursor-pointer text-xl hidden  md:flex items-center font-sen `}
           >
-            <li className=" hover:text-gray-400">
-              <Link href="/">Home</Link>
+            <li className=" hover:text-gray-400 ">
+              <Link href="/" className="text-sm">
+                Home
+              </Link>
             </li>
-            <li className=" hover:text-gray-400">
-              <Link href="/blogs">blogs</Link>
+            <li className=" hover:text-gray-400 font-extralight">
+              <Link href="/blogs" className="text-sm">
+                blogs
+              </Link>
             </li>
-            <li className=" hover:text-gray-400">
-              <Link href="/contact">Contact</Link>
+            <li className=" hover:text-gray-400 font-extralight">
+              <Link href="/contact" className="text-sm">
+                Contact us{" "}
+              </Link>
             </li>
-            
-            
+
+            <li className=" hover:text-gray-400 font-extralight">
+              <Link href="/contact" className="text-sm">
+                About us{" "}
+              </Link>
+            </li>
+
+            <button className=" bg-white min-w-[178px] px-[34px] py-2 text-[15px] font-sen font-bold sm:px-5 text-blue">
+              Subscribe
+            </button>
           </ul>
 
           {/* Hamburger button to toggle menu */}
@@ -69,7 +75,6 @@ function Navbar() {
               <li className=" text-center pb-3 text-2xl hover:text-blue-700 ">
                 <Link href="/contact">Contact</Link>
               </li>
-              
             </ul>
           </div>
         ) : null}

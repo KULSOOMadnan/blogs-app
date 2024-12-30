@@ -1,46 +1,34 @@
-
-import BlogCard from "../@components/postcard";
+import Blog from "../@components/Blog";
+import BlogCard from "../@components/Postcard";
 import { blogPosts } from "@/data/BlogPost";
-
-
-
 
 function BlogPost() {
   return (
     <div>
-      
-      <div className="min-h-screen py-4 px-12">
-      <h2 className="text-black mb-4 lg:text-6xl lg:leading-normal text-4xl sm:text-5xl font-extrabold text-center">
-        {" "}
-        Blog Post&apos;s
-      </h2>
-      <div className="text-black flex flex-row justify-center items-center gap-2  py-6">
-        <button
-          className={`rounded-full border-2  px-6 py-3 text-xl cursor-pointer hover:border-blue-600`}
-        >
-          All
-        </button>
-      </div>
+      <Blog />
+      <div className="h-auto  flex flex-col gap-4 py-10 px-12">
+        <h2 className="text-blue mb-4 lg:text-5xl lg:leading-normal text-4xl sm:text-5xl font-bold text-left font-sen ">
+          {" "}
+          All post&apos;s
+        </h2>
 
-      <div>
-        <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {blogPosts.map((post) => (
-            <li key={post.id}>
-              <BlogCard
-                
-                title={post.title}
-                description={post.description}
-                date={post.date}
-                imgUrl={post.imgUrl}
-                author={post.author}
-              />
-            </li>
-          ))}
-        </ul>
+        <div className="py-10">
+          <ul className="flex flex-col gap-20 ">
+            {blogPosts.map((post) => (
+              <li key={post.id}>
+                <BlogCard
+                Category={post.category}
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  imgUrl={post.imgUrl}
+                  author={post.author}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      </div>
-     
-    
     </div>
   );
 }

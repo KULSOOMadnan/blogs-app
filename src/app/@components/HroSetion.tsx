@@ -5,7 +5,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <section className="min-h-screen px-12 py-4">
+    <section className="lg:min-h-screen h-[70vh] px-12 py-4">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Right side: Image (Will appear first on small screens, second on larger screens) */}
@@ -15,7 +15,7 @@ function HeroSection() {
             alt="hero section"
             height={550}
             width={500}
-            className="rounded-full"
+            className="rounded-full md:h-[200px]"
           />
         </div>
 
@@ -40,7 +40,7 @@ function HeroSection() {
 
           {/* Call-to-Action Buttons */}
           <div className="space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-blue-700 text-white hover:bg-blue-500'>
+            <button className='px-6 py-3 w-full sm:w-fit rounded-full  bg-blue-700 text-white hover:bg-blue-500'>
               <Link href='/blogs'>Explore Blogs</Link>
             </button>
           </div>

@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Script from "next/script";  // Import Script
+import Script from "next/script"; // Import Script
 import Navbar from "./@components/Navbar";
-import Footer from "./@components/Footer";
-import { ReactNode } from "react";
 
+import { ReactNode } from "react";
+import Footer1 from "./@components/Footer1";
+
+import OurStory from "./@components/OurStory";
+import Category from "./@components/Category";
+import Join from "./@components/Join";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,21 +29,40 @@ export const metadata: Metadata = {
 
 interface LayoutProps {
   children: ReactNode;
-  components : JSX.Element
-  
+  components: JSX.Element;
 }
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <head>
-        <Script src="https://kit.fontawesome.com/7575e8f830.js" strategy="lazyOnload" />
+        <Script
+          src="https://kit.fontawesome.com/7575e8f830.js"
+          strategy="lazyOnload"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap"
+          rel="stylesheet"
+        ></link>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Navbar />
-        
+
         {children}
-        <Footer />
+        <Category />
+        <Join/>
+        <Footer1 />
       </body>
     </html>
   );
