@@ -1,5 +1,5 @@
 import Blog from "../@components/Blog";
-import BlogCard from "../@components/Postcard";
+import BlogCard from "../@components/Blogcard";
 import { blogPosts } from "@/data/BlogPost";
 
 function BlogPost() {
